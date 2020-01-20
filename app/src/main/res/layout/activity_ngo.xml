@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".NGOActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:stretchColumns="1">
+
+            <TableRow
+                android:id="@+id/frow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Name of NGO Address :"
+                    android:layout_marginTop="30dp"
+                    android:id="@+id/ngo_txt"
+                    android:lines="2"
+                    android:background="#eee9e9"
+                    android:textSize="18dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="4"
+                    android:id="@+id/four_txt"
+                    android:paddingLeft="155dp"
+                    android:layout_marginTop="30dp"
+                    android:lines="2"
+                    android:background="#eee9e9"
+                    android:textSize="18dp"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="/5"
+                    android:id="@+id/five_txt"
+                    android:layout_marginTop="30dp"
+                    android:lines="2"
+                    android:paddingRight="10dp"
+                    android:background="#eee9e9"
+                    android:textSize="18dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:lines="2"
+                    android:id="@+id/star_txt"
+                    android:background="#eee9e9"
+                    android:paddingRight="15dp"
+                    android:drawableRight="@drawable/ic_star_black_24dp"
+                    android:textSize="18dp"/>
+
+            </TableRow>
+            </TableLayout>
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contact:"
+        android:id="@+id/contact_txt"
+        android:background="#eee9e9"
+        android:paddingTop="10dp"
+        android:textSize="18dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Email id:"
+        android:id="@+id/id_txt"
+        android:lines="1"
+        android:paddingTop="10dp"
+        android:background="#eee9e9"
+        android:textSize="18dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        android:lines="2"
+        android:id="@+id/des_txt"
+        android:background="#eee9e9"
+        android:layout_marginTop="20dp"
+        android:textSize="18dp"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total contibutor till dates:"
+        android:lines="1"
+        android:id="@+id/total_txt"
+        android:background="#eee9e9"
+        android:textSize="18dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Call"
+            android:id="@+id/callbtn"
+            android:layout_marginTop="40dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:layout_marginLeft="20dp"
+            android:textColor="@android:color/white"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:background="@android:color/holo_blue_light"
+            />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Donate"
+            android:layout_marginLeft="85dp"
+            android:id="@+id/donatebtn"
+            android:layout_marginTop="40dp"
+            android:paddingLeft="50dp"
+            android:paddingRight="50dp"
+            android:textColor="@android:color/white"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:background="@android:color/holo_blue_light"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
