@@ -10,7 +10,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
-    private static String BASE_URL = "https://admin.vgecalumni.org/";
+    private static String BASE_URL = "http://";
     private static RetrofitClient mInstance;
     private Retrofit retrofit;
 
@@ -37,7 +37,6 @@ public class RetrofitClient {
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build();
-
     }
 
     public static synchronized RetrofitClient getInstance() {
@@ -47,7 +46,7 @@ public class RetrofitClient {
         return mInstance;
     }
 
-    public InterPreter getInterPreter() {
-        return retrofit.create(InterPreter.class);
+    public InterPrater getInterPreter() {
+        return retrofit.create(InterPrater.class);
     }
 }

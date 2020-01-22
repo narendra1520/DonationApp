@@ -76,6 +76,7 @@
         android:gravity="start|top"
         android:background="#eee9e9"
         android:inputType="textMultiLine" />
+
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
