@@ -17,7 +17,7 @@ import butterknife.ButterKnife;
 
 public class ListActivity extends AppCompatActivity {
 
-    @BindView(R.id.recler)
+    @BindView(R.id.reclear)
     RecyclerView recyclerView;
 
     private List<NGO> NGOList = new ArrayList<>();
