@@ -57,6 +57,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:hint="Category"
+            android:id="@+id/catagory_edit"
             android:layout_marginTop="40dp"/>
 
     </TableRow>
