@@ -9,6 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.donationapp.Interface.RecylerViewClicked;
 import com.example.donationapp.POJO.NGO;
 import com.example.donationapp.R;
 
@@ -17,10 +18,12 @@ import java.util.List;
 public class NGOAdapter extends RecyclerView.Adapter<NGOAdapter.NGOViewHolder> {
     List<NGO> NGOList;
     Context context;
+    RecylerViewClicked listner;
 
-    public NGOAdapter(List<NGO> NGOList, Context context) {
+    public NGOAdapter(List<NGO> NGOList, Context context, RecylerViewClicked listner) {
         this.NGOList = NGOList;
         this.context = context;
+        this.listner = listner;
     }
 
     @NonNull
@@ -35,6 +38,7 @@ public class NGOAdapter extends RecyclerView.Adapter<NGOAdapter.NGOViewHolder> {
         NGO experience = NGOList.get(position);
         holder.name.setText(experience.getName());
         holder.address.setText(experience.getAddress());
+        holder.itemView.setOnClickListener(v -> listner.onClick(position));
     }
 
     @Override
