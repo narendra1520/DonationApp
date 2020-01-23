@@ -31,12 +31,11 @@ public class NGOActivity extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View v){
-       // if(v.getId()==R.id.donatebtn){
-         //   donate();
-        //}
-            if(v.getId()==R.id.callbtn){
+        if(v.getId()==R.id.donatebtn){
+            Intent intent = new Intent(this,DonateActivity.class);
+            startActivity(intent);
+        } else if(v.getId()==R.id.callbtn){
             call();
-
         }
     }
 

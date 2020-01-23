@@ -17,7 +17,7 @@ public class DonateActivity extends AppCompatActivity implements View.OnClickLis
     EditText dname_edit;
     @BindView(R.id.demail_edit)
     EditText demail_edit;
-    @BindView(R.id.damount_edit)
+    @BindView(R.id.damount_rs)
     EditText damount_edit;
     @BindView(R.id.donebtn)
     Button donebtn;
@@ -26,7 +26,7 @@ public class DonateActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register);
+        setContentView(R.layout.activity_donate);
         ButterKnife.bind(this);
         donebtn.setOnClickListener(this);
     }
@@ -36,7 +36,6 @@ public class DonateActivity extends AppCompatActivity implements View.OnClickLis
         if(v.getId()==R.id.donebtn) {
             done();
         }
-
     }
 
     private void done()
