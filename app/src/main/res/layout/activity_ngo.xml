@@ -158,14 +158,42 @@
             android:background="@android:color/holo_blue_light" />
 
         <Button
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="10dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Donate"
-            android:onClick="donate"
-            android:id="@+id/donatebtn"
+            android:text="Donate\nItem"
+            android:id="@+id/itembtn"
             android:textColor="@android:color/white"
             android:background="@android:color/holo_blue_light" />
+
+        <Button
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Donate\nMoney"
+            android:id="@+id/moneybtn"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_blue_light" />
+
+        <Button
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Map"
+            android:id="@+id/mapbtn"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_blue_light" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+
 
     </LinearLayout>
 

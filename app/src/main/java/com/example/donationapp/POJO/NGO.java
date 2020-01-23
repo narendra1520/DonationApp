@@ -1,12 +1,13 @@
 package com.example.donationapp.POJO;
 
 public class NGO {
-    String name, address, tag;
+    String name, address, type, tag;
 
-    public NGO(String name, String address, String tag) {
+    public NGO(String name, String address, String type, String tag) {
         this.name = name;
         this.address = address;
         this.tag = tag;
+        this.type = type;
     }
 
     public String getName() {
@@ -15,6 +16,10 @@ public class NGO {
 
     public String getAddress() {
         return address;
+    }
+
+    public String getType() {
+        return type;
     }
 
     public String getTag() {
