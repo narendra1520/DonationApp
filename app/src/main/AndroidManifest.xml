@@ -11,21 +11,21 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".homeActivity">
-
-        </activity>
-        <activity android:name=".ListActivity"></activity>
-        <activity android:name=".NGOActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".ngohomeActivity"></activity>
+        <activity android:name=".homeActivity" />
+        <activity android:name=".ListActivity" />
+        <activity android:name=".NGOActivity" />
         <activity android:name=".NewcollectionActivity" />
         <activity android:name=".ForgotpasswordActivity" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".DonateActivity">
+        <activity android:name=".ngodonationActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
+        <activity android:name=".DonateActivity" />
         <activity android:name=".MainActivity" />
     </application>
 
