@@ -8,14 +8,15 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="76dp"
-        android:layout_marginBottom="46dp"></FrameLayout>
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/bootom_navg"
-        android:layout_gravity="bottom"
-        app:menu="@menu/button_nav"/>
+        android:layout_height="match_parent"
+        android:layout_marginBottom="56dp"/>
 
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:visibility="visible"
+        app:menu="@menu/button_nav" />
 
 </FrameLayout>

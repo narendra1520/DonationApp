@@ -69,7 +69,7 @@ public class Validator{
             return null;
         }
         else {
-            return "enter valid no";
+            return "enter valid mobile no.";
         }
     }
     public static String amountValid(String amount){
