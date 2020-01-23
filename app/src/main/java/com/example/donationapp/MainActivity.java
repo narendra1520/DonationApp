@@ -19,7 +19,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     EditText pass_edit;
     @BindView(R.id.loginbtn)
     Button loginbtn;
-
     String email,pass;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
