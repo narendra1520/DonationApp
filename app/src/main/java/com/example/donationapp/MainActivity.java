@@ -52,7 +52,4 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             Toast.makeText(this,"Login Success",Toast.LENGTH_LONG).show();
         }
     }
-
-
 }
-
