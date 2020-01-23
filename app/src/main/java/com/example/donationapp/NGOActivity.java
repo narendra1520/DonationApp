@@ -3,10 +3,13 @@ package com.example.donationapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.example.donationapp.POJO.NGO;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -28,20 +31,21 @@ public class NGOActivity extends Activity implements View.OnClickListener{
 
     @Override
     public void onClick(View v){
-        if(v.getId()==R.id.donatebtn){
-            donate();
-        }
-        else if(v.getId()==R.id.callbtn){
+       // if(v.getId()==R.id.donatebtn){
+         //   donate();
+        //}
+            if(v.getId()==R.id.callbtn){
             call();
 
         }
     }
 
-
-    private void donate()
+    public void donate()
     {
 
-        Toast.makeText(this,"donate Success",Toast.LENGTH_LONG).show();
+       // Toast.makeText(this,"donate Success",Toast.LENGTH_LONG).show();
+        Intent ngo = new Intent(NGOActivity.this,DonateActivity.class);
+        startActivity(ngo);
 
 
     }
