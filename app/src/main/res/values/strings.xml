@@ -7,7 +7,7 @@
     <string name="title_setting">Setting</string>
     <string name="title_activity_homenav">homeActivity</string>-->
 
-    <string name="app_name">spinner_example</string>
+    <string name="app_name">Donation App</string>
 
     <string-array name="name">
         <item>Money</item>

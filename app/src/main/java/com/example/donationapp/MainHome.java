@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -31,6 +33,7 @@ public class MainHome extends AppCompatActivity implements View.OnClickListener 
         collection.setOnClickListener(this);
         setting.setOnClickListener(this);
     }
+
     public void onClick(View v) {
         if (v.getId() == R.id.homebtn) {
             Intent intent = new Intent(this, NGOFilter.class);
@@ -43,5 +46,13 @@ public class MainHome extends AppCompatActivity implements View.OnClickListener 
             Intent intent = new Intent(this, NewcollectionActivity.class);
             startActivity(intent);
         }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        MenuInflater inflater=getMenuInflater();
+        inflater.inflate(R.menu.optinal_menu,menu);
+        return true;
     }
 }
