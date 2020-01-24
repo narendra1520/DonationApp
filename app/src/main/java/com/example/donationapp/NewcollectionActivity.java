@@ -18,7 +18,7 @@ public class NewcollectionActivity extends Activity implements View.OnClickListe
     EditText ncname_edit;
     @BindView(R.id.ncaddress_edit)
     EditText ncaddress_edit;
-    @BindView(R.id.nccontact_edit)
+    @BindView(R.id.ncemail_edit)
     EditText ncncontact_edit;
     @BindView(R.id.more_edit)
     EditText more_edit;

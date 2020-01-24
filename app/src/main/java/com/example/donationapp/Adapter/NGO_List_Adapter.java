@@ -39,7 +39,6 @@ public class NGO_List_Adapter extends RecyclerView.Adapter<NGO_List_Adapter.NGOV
         NGO ngo = NGOList.get(position);
         holder.name.setText(ngo.getName());
         holder.address.setText(ngo.getAddress());
-        holder.type.setText(ngo.getType());
         holder.itemView.setOnClickListener(v -> listner.onClick(position));
     }
 
@@ -49,13 +48,12 @@ public class NGO_List_Adapter extends RecyclerView.Adapter<NGO_List_Adapter.NGOV
     }
 
     class NGOViewHolder extends RecyclerView.ViewHolder {
-        TextView name, address, type;
+        TextView name, address;
 
         NGOViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.ngo_name);
             address = itemView.findViewById(R.id.ngo_address);
-            type = itemView.findViewById(R.id.ngo_type);
         }
     }
 }

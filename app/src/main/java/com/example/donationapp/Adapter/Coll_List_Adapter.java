@@ -10,32 +10,33 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.donationapp.Interface.RecylerViewClicked;
+import com.example.donationapp.POJO.Coll;
 import com.example.donationapp.POJO.NGO;
 import com.example.donationapp.R;
 
 import java.util.List;
 
-public class NGOAdapter extends RecyclerView.Adapter<NGOAdapter.NGOViewHolder> {
-    List<NGO> NGOList;
+public class Coll_List_Adapter extends RecyclerView.Adapter<Coll_List_Adapter.CollViewHolder> {
+    List<Coll> CollList;
     Context context;
     RecylerViewClicked listner;
 
-    public NGOAdapter(List<NGO> NGOList, Context context, RecylerViewClicked listner) {
-        this.NGOList = NGOList;
+    public Coll_List_Adapter(List<Coll> CollList, Context context, RecylerViewClicked listner) {
+        this.CollList = CollList;
         this.context = context;
         this.listner = listner;
     }
 
     @NonNull
     @Override
-    public NGOAdapter.NGOViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public CollViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.card_collection, parent, false);
-        return new NGOViewHolder(view);
+        return new CollViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NGOAdapter.NGOViewHolder holder, int position) {
-        NGO experience = NGOList.get(position);
+    public void onBindViewHolder(@NonNull CollViewHolder holder, int position) {
+        Coll experience = CollList.get(position);
         holder.name.setText(experience.getName());
         holder.address.setText(experience.getAddress());
         holder.itemView.setOnClickListener(v -> listner.onClick(position));
@@ -43,12 +44,12 @@ public class NGOAdapter extends RecyclerView.Adapter<NGOAdapter.NGOViewHolder> {
 
     @Override
     public int getItemCount() {
-        return NGOList.size();
+        return CollList.size();
     }
 
-    class NGOViewHolder extends RecyclerView.ViewHolder {
+    class CollViewHolder extends RecyclerView.ViewHolder {
         TextView name, address;
-        NGOViewHolder(@NonNull View itemView) {
+        CollViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.ngo_name);
             address = itemView.findViewById(R.id.ngo_address);

@@ -10,7 +10,7 @@ import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitClient {
-    private static String BASE_URL = "http://";
+    private static String BASE_URL = "https://devkj.000webhostapp.com/";
     private static RetrofitClient mInstance;
     private Retrofit retrofit;
 
@@ -18,17 +18,14 @@ public class RetrofitClient {
 
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .addInterceptor(
-                        new Interceptor() {
-                            @Override
-                            public Response intercept(Chain chain) throws IOException {
-                                Request original = chain.request();
+                        chain -> {
+                            Request original = chain.request();
 
-                                Request.Builder requestBuilder = original.newBuilder()
-                                        .method(original.method(), original.body());
+                            Request.Builder requestBuilder = original.newBuilder()
+                                    .method(original.method(), original.body());
 
-                                Request request = requestBuilder.build();
-                                return chain.proceed(request);
-                            }
+                            Request request = requestBuilder.build();
+                            return chain.proceed(request);
                         }
                 ).build();
 

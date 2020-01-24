@@ -6,17 +6,25 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
+import com.example.donationapp.Adapter.Coll_List_Adapter;
 import com.example.donationapp.Adapter.NGO_List_Adapter;
 import com.example.donationapp.Adapter.NGO_select_Adapter;
+import com.example.donationapp.Api.RetrofitClient;
 import com.example.donationapp.Interface.RecylerViewClicked;
+import com.example.donationapp.POJO.CollRes;
 import com.example.donationapp.POJO.NGO;
+import com.example.donationapp.POJO.NGORes;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class NgoListActivity extends AppCompatActivity implements RecylerViewClicked {
 
@@ -36,8 +44,24 @@ public class NgoListActivity extends AppCompatActivity implements RecylerViewCli
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
         recyclerView.hasFixedSize();
 
-        NGOList.add(new NGO("Bachpan","Rajkot","Children","1277837376728"));
-        NGOList.add(new NGO("HelpOther","Ahmedabad","Childer","7261526526722"));
+        Call<NGORes> responseCall1 = RetrofitClient.getInstance()
+                .getInterPreter().getNgoALl();
+        responseCall1.enqueue(new Callback<NGORes>() {
+            @Override
+            public void onResponse(Call<NGORes> call, Response<NGORes> response) {
+                NGORes response1 = response.body();
+                NGOList = response1.getNgo();
+                NGO_List_Adapter adapter = new NGO_List_Adapter(NGOList, NgoListActivity.this,
+                        NgoListActivity.this);
+                recyclerView.setAdapter(adapter);
+            }
+
+            @Override
+            public void onFailure(Call<NGORes> call, Throwable t) {
+                Toast.makeText(NgoListActivity.this, "Error Occurred", Toast.LENGTH_LONG).show();
+            }
+        });
+
         if(NGOList!=null) {
             adapter = new NGO_List_Adapter(NGOList, this, this::onClick);
             recyclerView.setAdapter(adapter);
