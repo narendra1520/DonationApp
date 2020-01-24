@@ -14,26 +14,27 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".SelectNGOActivity">
+        <activity android:name=".imageActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
-        <activity android:name=".MainHome" />
+        <activity android:name=".SelectNGOActivity"></activity>
+        <activity android:name=".MainHome">
+            </activity>
         <activity android:name=".NgoListActivity" />
-        <activity android:name=".CollListActivity">
-        </activity>
+        <activity android:name=".CollListActivity"></activity>
         <activity android:name=".NewcollectionActivity" />
         <activity android:name=".ForgotpasswordActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MoneyActivity" />
-        <activity android:name=".LoginActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".LoginActivity" />
         <activity android:name=".CollDetailActivity" />
         <activity android:name=".NgoDetailActivity" />
         <activity android:name=".NGOFilter" />
-        <activity android:name=".reqhistoryActivity"/>
+        <activity android:name=".reqhistoryActivity" />
     </application>
 
 </manifest>
