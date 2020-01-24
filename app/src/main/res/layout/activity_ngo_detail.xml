@@ -16,7 +16,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Name of NGO"
+                android:text="Volcano Foundation NGO"
                 android:id="@+id/ngo_txt"
                 android:layout_marginEnd="60dp"
                 android:textSize="18dp"/>
@@ -72,7 +72,7 @@
             android:layout_height="wrap_content"
             android:lines="2"
             android:maxLines="2"
-            android:text="nr. school, falguni road, rajkot"
+            android:text="Vidya Nagar Main Rd, Near Virani Chowk, Manhar Plot, Bhakti Nagar, Rajkot, Gujarat 360001"
             android:textSize="18dp" />
 
     </LinearLayout>
@@ -88,7 +88,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Email@example.com"
+        android:text="bachpan@gmail.com"
         android:id="@+id/id_txt"
         android:lines="1"
         android:paddingTop="10dp"
@@ -111,7 +111,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="this ngo is.."
+            android:text="Non-governmental organization in Rajkot, Gujarat"
             android:lines="2"
             android:maxLines="2"
             android:id="@+id/des_txt"

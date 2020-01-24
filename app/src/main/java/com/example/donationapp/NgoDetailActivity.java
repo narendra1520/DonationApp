@@ -43,7 +43,7 @@ public class NGOActivity extends Activity implements View.OnClickListener{
         }else if(v.getId()==R.id.itembtn){
             //item
         }else if(v.getId()==R.id.mapbtn){
-            String uri = "https://maps.app.goo.gl/LNSFuBUBX93oNzCc7";
+            String uri = "https://goo.gl/maps/7aYEv2kHxjbRDXv37";
             Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(uri));
             startActivity(intent);
         }

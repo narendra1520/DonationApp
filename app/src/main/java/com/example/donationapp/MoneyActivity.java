@@ -60,8 +60,5 @@ public class DonateActivity extends AppCompatActivity implements View.OnClickLis
             dname_edit.setError(null);
             Toast.makeText(this,"Donation Success",Toast.LENGTH_LONG).show();
         }
-
     }
-
-
 }

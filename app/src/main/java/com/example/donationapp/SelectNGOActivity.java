@@ -4,12 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.ListActivity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 
-import com.example.donationapp.Adapter.NGOAdapter;
 import com.example.donationapp.Adapter.NGO_select_Adapter;
 import com.example.donationapp.Interface.RecylerViewClicked;
 import com.example.donationapp.POJO.NGO;
@@ -39,7 +36,7 @@ public class Select_NGO extends AppCompatActivity implements RecylerViewClicked 
         recyclerView.hasFixedSize();
 
         NGOList.add(new NGO("Bachpan","Rajkot","Children","1277837376728"));
-        NGOList.add(new NGO("HelpOther","Ahmedabad","Bird & Animal","7261526526722"));
+        NGOList.add(new NGO("HelpOther","Ahmedabad","Childer","7261526526722"));
         if(NGOList!=null) {
             adapter = new NGO_select_Adapter(NGOList, this, this::onClick);
             recyclerView.setAdapter(adapter);
@@ -48,7 +45,7 @@ public class Select_NGO extends AppCompatActivity implements RecylerViewClicked 
 
     @Override
     public void onClick(int i) {
-        Intent intent = new Intent(this, ListActivityNgo.class);
+        Intent intent = new Intent(this, CollListActivity.class);
         startActivity(intent);
     }
 }
