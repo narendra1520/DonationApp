@@ -11,7 +11,7 @@ import android.widget.Toast;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class DonateActivity extends AppCompatActivity implements View.OnClickListener {
+public class MoneyActivity extends AppCompatActivity implements View.OnClickListener {
 
     @BindView(R.id.dname_edit)
     EditText dname_edit;
@@ -26,7 +26,7 @@ public class DonateActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_donate);
+        setContentView(R.layout.activity_money);
         ButterKnife.bind(this);
         donebtn.setOnClickListener(this);
     }

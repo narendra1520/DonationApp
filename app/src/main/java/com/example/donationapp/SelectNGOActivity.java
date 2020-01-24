@@ -17,7 +17,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class Select_NGO extends AppCompatActivity implements RecylerViewClicked {
+public class SelectNGOActivity extends AppCompatActivity implements RecylerViewClicked {
 
     @BindView(R.id.sel_ngo_rec)
     RecyclerView recyclerView;

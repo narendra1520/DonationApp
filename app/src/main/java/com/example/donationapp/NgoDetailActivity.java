@@ -10,7 +10,7 @@ import android.widget.Button;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class NGOActivity extends Activity implements View.OnClickListener{
+public class NgoDetailActivity extends Activity implements View.OnClickListener{
 
     @BindView(R.id.moneybtn)
     Button moneybtn;
@@ -23,7 +23,7 @@ public class NGOActivity extends Activity implements View.OnClickListener{
 
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_ngo);
+        setContentView(R.layout.activity_ngo_detail);
         ButterKnife.bind(this);
         moneybtn.setOnClickListener(this);
         callbtn.setOnClickListener(this);
@@ -34,14 +34,15 @@ public class NGOActivity extends Activity implements View.OnClickListener{
     @Override
     public void onClick(View v){
         if(v.getId()==R.id.moneybtn){
-            Intent intent = new Intent(this,DonateActivity.class);
+            Intent intent = new Intent(this, MoneyActivity.class);
             startActivity(intent);
         } else if(v.getId()==R.id.callbtn){
             String uri = "tel:" + "+919016214426";
             Intent intent = new Intent(Intent.ACTION_CALL,Uri.parse(uri));
             startActivity(intent);
         }else if(v.getId()==R.id.itembtn){
-            //item
+            Intent intent = new Intent(this, NewcollectionActivity.class);
+            startActivity(intent);
         }else if(v.getId()==R.id.mapbtn){
             String uri = "https://goo.gl/maps/7aYEv2kHxjbRDXv37";
             Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(uri));

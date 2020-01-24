@@ -4,8 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.example.donationapp.Adapter.NGOAdapter;
 import com.example.donationapp.Interface.RecylerViewClicked;
@@ -17,7 +17,7 @@ import java.util.List;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-public class ListActivityNgo extends AppCompatActivity implements RecylerViewClicked {
+public class CollListActivity extends AppCompatActivity implements RecylerViewClicked {
 
     @BindView(R.id.reclear)
     RecyclerView recyclerView;
@@ -28,7 +28,7 @@ public class ListActivityNgo extends AppCompatActivity implements RecylerViewCli
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_list_ngo);
+        setContentView(R.layout.activity_coll_list);
 
         ButterKnife.bind(this);
 
@@ -37,6 +37,7 @@ public class ListActivityNgo extends AppCompatActivity implements RecylerViewCli
 
         NGOList.add(new NGO("Bachpan","Rajkot","Children","1277837376728"));
         NGOList.add(new NGO("HelpOther","Ahmedabad","Bird & Animal","7261526526722"));
+
         if(NGOList!=null) {
             adapter = new NGOAdapter(NGOList, this, this::onClick);
             recyclerView.setAdapter(adapter);
@@ -45,6 +46,7 @@ public class ListActivityNgo extends AppCompatActivity implements RecylerViewCli
 
     @Override
     public void onClick(int i) {
-        Toast.makeText(this,"click"+i,Toast.LENGTH_LONG).show();
+        Intent intent = new Intent(this, CollDetailActivity.class);
+        startActivity(intent);
     }
 }

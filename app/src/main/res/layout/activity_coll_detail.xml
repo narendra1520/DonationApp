@@ -16,7 +16,6 @@
             android:orientation="vertical"
             android:background="#eee9e9">
 
-
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -29,27 +28,15 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Address"
-                android:lines="2"
-                android:id="@+id/addr_txt"
+                android:text="Address:"
                 android:textSize="18dp"/>
 
-            <LinearLayout
+            <TextView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Distance from you:"
-                    android:textSize="18dp" />
-
-                <TextView
-                    android:layout_marginStart="5dp"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="3KM"
-                    android:textSize="18dp" />
-            </LinearLayout>
+                android:layout_height="wrap_content"
+                android:text="here"
+                android:id="@+id/addr_txt"
+                android:textSize="18dp"/>
 
         </LinearLayout>
         <LinearLayout
@@ -65,7 +52,6 @@
                 android:text="4"
                 android:id="@+id/four_txt"
                 android:textSize="18dp"/>
-
 
             <TextView
                 android:layout_width="wrap_content"
@@ -83,58 +69,6 @@
 
         </LinearLayout>
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Map"
-            android:id="@+id/map_btn"
-            android:textColor="@android:color/white"
-            android:layout_marginRight="15dp"
-            android:layout_marginBottom="5dp"
-            android:background="@android:color/holo_blue_light"
-            android:layout_gravity="bottom|right"/>
-
-    </FrameLayout>
-
-    <FrameLayout
-        android:layout_marginTop="20dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#eee9e9">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Contact Email:"
-                android:textSize="18dp"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="exapmle@.com"
-                android:lines="2"
-                android:background="#eee9e9"
-                android:id="@+id/cemail_txt"
-                android:textSize="18dp" />
-
-
-        </LinearLayout>
-
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Call"
-            android:id="@+id/cal_btn"
-            android:textColor="@android:color/white"
-            android:layout_marginEnd="15dp"
-            android:background="@android:color/holo_blue_light"
-            android:layout_gravity="center_vertical|right"/>
-
     </FrameLayout>
 
     <LinearLayout
@@ -147,7 +81,31 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Donation schedule :"
+            android:text="Contact:"
+            android:textSize="18dp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="exapmle@.com"
+            android:lines="2"
+            android:id="@+id/email_txt"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#eee9e9">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Donation schedule:"
             android:textSize="18dp"/>
 
         <TextView
@@ -160,7 +118,7 @@
             android:paddingTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Donation Done:"
+            android:text="Donation Done till date:"
             android:textSize="18dp" />
 
         <TextView
@@ -176,21 +134,23 @@
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#eee9e9"
-        android:orientation="vertical">
+        android:gravity="center">
 
-        <TextView
-            android:layout_width="match_parent"
+        <Button
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Support from NGO :"
-            android:textSize="18dp"/>
+            android:text="Map"
+            android:id="@+id/map_btn"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_blue_light"/>
+        <Button
+            android:layout_marginStart="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Call"
+            android:id="@+id/cal_btn"
+            android:textColor="@android:color/white"
+            android:background="@android:color/holo_blue_light"/>
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/ngo_list"
-            android:text="Bachpan"
-            android:textSize="18dp" />
     </LinearLayout>
-
 </LinearLayout>

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Select_NGO">
+    tools:context=".SelectNGOActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/sel_ngo_rec"

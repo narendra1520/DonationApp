@@ -1,50 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_margin="5dp"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/ngo_name"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="NGO name loading.."/>
-    <TextView
-        android:id="@+id/ngo_address"
-        android:layout_marginTop="5dp"
-        android:lines="2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="loading address.."/>
-
-    <LinearLayout
-        android:layout_marginTop="5dp"
-        android:layout_width="match_parent"
-        android:orientation="horizontal"
         android:layout_height="wrap_content">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Type:"/>
-
-        <TextView
-            android:layout_marginStart="5dp"
-            android:id="@+id/ngo_type"
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="childer"/>
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/ngo_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NGO name loading.."/>
+            <TextView
+                android:id="@+id/ngo_address"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="40dp"
+                android:lines="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="loading address.."/>
 
-    </LinearLayout>
+            <LinearLayout
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
 
-    <Button
-        android:layout_gravity="end"
-        android:layout_marginTop="5dp"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type:"/>
+
+                <TextView
+                    android:layout_marginStart="5dp"
+                    android:id="@+id/ngo_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="childer"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </FrameLayout>
+
+    <ImageButton
+        android:layout_gravity="center_vertical|end"
         android:id="@+id/selected_ngo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="select"/>
+        android:src="@drawable/ic_check_black_24dp"/>
 
-</LinearLayout>
+</androidx.cardview.widget.CardView>

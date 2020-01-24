@@ -4,7 +4,6 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -16,12 +15,12 @@ import com.example.donationapp.R;
 
 import java.util.List;
 
-public class NGO_List_Adapter extends RecyclerView.Adapter<NGO_List_Adapter.NGOViewHolder> {
+public class NGOAdapter extends RecyclerView.Adapter<NGOAdapter.NGOViewHolder> {
     List<NGO> NGOList;
     Context context;
     RecylerViewClicked listner;
 
-    public NGO_List_Adapter(List<NGO> NGOList, Context context, RecylerViewClicked listner) {
+    public NGOAdapter(List<NGO> NGOList, Context context, RecylerViewClicked listner) {
         this.NGOList = NGOList;
         this.context = context;
         this.listner = listner;
@@ -29,17 +28,16 @@ public class NGO_List_Adapter extends RecyclerView.Adapter<NGO_List_Adapter.NGOV
 
     @NonNull
     @Override
-    public NGO_List_Adapter.NGOViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public NGOAdapter.NGOViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.card_collection, parent, false);
         return new NGOViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull NGO_List_Adapter.NGOViewHolder holder, int position) {
-        NGO ngo = NGOList.get(position);
-        holder.name.setText(ngo.getName());
-        holder.address.setText(ngo.getAddress());
-        holder.type.setText(ngo.getType());
+    public void onBindViewHolder(@NonNull NGOAdapter.NGOViewHolder holder, int position) {
+        NGO experience = NGOList.get(position);
+        holder.name.setText(experience.getName());
+        holder.address.setText(experience.getAddress());
         holder.itemView.setOnClickListener(v -> listner.onClick(position));
     }
 
@@ -49,13 +47,11 @@ public class NGO_List_Adapter extends RecyclerView.Adapter<NGO_List_Adapter.NGOV
     }
 
     class NGOViewHolder extends RecyclerView.ViewHolder {
-        TextView name, address, type;
-
+        TextView name, address;
         NGOViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.ngo_name);
             address = itemView.findViewById(R.id.ngo_address);
-            type = itemView.findViewById(R.id.ngo_type);
         }
     }
 }

@@ -31,24 +31,6 @@ public class Validator{
         }
     }
 
-    public static String weightValid(String weight){
-        if(weight.isEmpty()){
-            return "Required";
-
-        }else {
-            return null;
-        }
-    }
-
-    public static String catagoryValid(String catagory){
-        if(catagory.isEmpty()){
-            return "Required";
-
-        }else {
-            return null;
-        }
-    }
-
     public static String moreeditValid(String edit){
         if(edit.isEmpty()){
             return "Required";

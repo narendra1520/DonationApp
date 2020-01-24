@@ -5,6 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -30,7 +31,7 @@ public class NGO_select_Adapter extends RecyclerView.Adapter<NGO_select_Adapter.
     @NonNull
     @Override
     public NGO_select_Adapter.NGOViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.select_ngo_card, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.card_select_ngo, parent, false);
         return new NGOViewHolder(view);
     }
 
@@ -50,7 +51,8 @@ public class NGO_select_Adapter extends RecyclerView.Adapter<NGO_select_Adapter.
 
     class NGOViewHolder extends RecyclerView.ViewHolder {
         TextView name, address, type;
-        Button button;
+        ImageButton button;
+
         NGOViewHolder(@NonNull View itemView) {
             super(itemView);
             name = itemView.findViewById(R.id.ngo_name);

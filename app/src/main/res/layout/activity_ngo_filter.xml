@@ -5,19 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".NGOhomeActivity">
+    tools:context=".NGOFilter">
 
-    <EditText
+    <!--<EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/name"
         android:hint="Name"
-        android:layout_marginTop="20dp"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/id"
-        android:hint="Email-id"
         android:layout_marginTop="20dp"/>
 
     <EditText
@@ -25,38 +19,36 @@
         android:layout_height="wrap_content"
         android:id="@+id/cont"
         android:hint="Contact No"
-        android:layout_marginTop="20dp"/>
+        android:layout_marginTop="20dp"/>-->
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Type"
+        android:text="Type of NGO"
         android:textSize="18dp"
         android:layout_marginTop="20dp"/>
 
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/spiner1"
-        android:entries="@array/name"/>
+        android:id="@+id/spn_type"/>
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Catagory"
+        android:text="Category of Donation"
         android:textSize="18dp"
         android:layout_marginTop="20dp"/>
 
     <Spinner
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@array/catagory"
-        android:id="@+id/spiner"/>
-
+        android:id="@+id/spn_cate"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Donate"
-        android:id="@+id/dobtn"
+        android:id="@+id/search_ngo"
         android:layout_marginTop="40dp"
         android:layout_gravity="center"
         android:paddingLeft="50dp"
@@ -64,9 +56,6 @@
         android:textColor="@android:color/white"
         android:paddingBottom="10dp"
         android:paddingTop="10dp"
-        android:background="@android:color/holo_blue_light"
-        />
-
-
+        android:background="@android:color/holo_blue_light" />
 
 </LinearLayout>

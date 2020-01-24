@@ -1,13 +1,12 @@
 package com.example.donationapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import butterknife.BindView;
@@ -25,9 +24,10 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
     @BindView(R.id.registerbtn)
     Button registerbtn;
     @BindView(R.id.login_txt)
-    Button login_txt;
+    TextView login_txt;
 
     String email,pass,name,mobileno;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +40,8 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if(v.getId()==R.id.login_txt) {
-            login();
+            Intent i= new Intent(RegisterActivity.this, LoginActivity.class);
+            startActivity(i);
         }
         else if(v.getId()==R.id.registerbtn){
             registration();
@@ -55,8 +56,8 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
         email = remail_edit.getText().toString();
         pass = rpass_edit.getText().toString();
         mobileno=rmobile_edit.getText().toString();
+        
         String er_name = Validator.nameValid(name);
-
         String er_email = Validator.emialValid(email);
         String er_pass = Validator.passValid(pass);
         String er_mobileno = Validator.mobileValid(mobileno);
@@ -79,13 +80,6 @@ public class RegisterActivity extends Activity implements View.OnClickListener {
         }
 
     }
-    private void login() {
-
-        Intent i= new Intent(RegisterActivity.this,MainActivity.class);
-        startActivity(i);
-    }
-
-
 
 }
 

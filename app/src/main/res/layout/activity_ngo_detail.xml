@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".NGOActivity">
+    tools:context=".NgoDetailActivity">
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -77,23 +77,28 @@
 
     </LinearLayout>
 
-    <TextView
+    <LinearLayout
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Contact Email:"
-        android:id="@+id/contact_txt"
         android:background="#eee9e9"
-        android:paddingTop="10dp"
-        android:textSize="18dp"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="bachpan@gmail.com"
-        android:id="@+id/id_txt"
-        android:lines="1"
-        android:paddingTop="10dp"
-        android:background="#eee9e9"
-        android:textSize="18dp"/>
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Contact:"
+            android:id="@+id/contact_txt"
+            android:textSize="18dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="bachpan@gmail.com"
+            android:id="@+id/id_txt"
+            android:lines="1"
+            android:paddingTop="10dp"
+            android:background="#eee9e9"
+            android:textSize="18dp"/>
+    </LinearLayout>
 
     <LinearLayout
         android:layout_marginTop="20dp"
@@ -192,8 +197,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center">
-
-
 
     </LinearLayout>
 
