@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -54,5 +55,21 @@ public class MainHome extends AppCompatActivity implements View.OnClickListener 
         MenuInflater inflater=getMenuInflater();
         inflater.inflate(R.menu.optinal_menu,menu);
         return true;
+
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int id = item.getItemId();
+        if(id == R.id.optionmenu)
+        {
+               Intent intout = new Intent(MainHome.this,LoginActivity.class);
+               startActivity(intout);
+
+
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }
