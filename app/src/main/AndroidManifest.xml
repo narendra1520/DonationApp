@@ -32,6 +32,7 @@
         <activity android:name=".CollDetailActivity" />
         <activity android:name=".NgoDetailActivity" />
         <activity android:name=".NGOFilter" />
+        <activity android:name=".reqhistoryActivity"/>
     </application>
 
 </manifest>

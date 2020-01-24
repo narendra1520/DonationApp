@@ -6,9 +6,9 @@
     <string name="title_location">Collaction point</string>
     <string name="title_setting">Setting</string>
     <string name="title_activity_homenav">homeActivity</string>-->
-    
+
     <string name="app_name">spinner_example</string>
-    
+
     <string-array name="name">
         <item>Money</item>
         <item>Food</item>
@@ -25,8 +25,8 @@
         <item>Woman</item>
         <item>Education</item>
         <item>Old age home</item>
-            <item>Birds and animal</item>
-            <item>Rural Development</item>
+        <item>Birds and animal</item>
+        <item>Rural Development</item>
     </string-array>
 
 
