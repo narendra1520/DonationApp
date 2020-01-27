@@ -1,17 +1,7 @@
 package com.example.donationapp.POJO;
 
 public class CollDetails {
-    String name, address, contact, email, gmap, toatl_donation ,tag;
-
-    public CollDetails(String name, String address, String contact, String email, String gmap, String toatl_donation, String tag) {
-        this.name = name;
-        this.address = address;
-        this.contact = contact;
-        this.email = email;
-        this.gmap = gmap;
-        this.toatl_donation = toatl_donation;
-        this.tag = tag;
-    }
+    String name, address, tag, contact, email, gmap, toatl_donation;
 
     public String getName() {
         return name;
@@ -19,6 +9,10 @@ public class CollDetails {
 
     public String getAddress() {
         return address;
+    }
+
+    public String getTag() {
+        return tag;
     }
 
     public String getContact() {
@@ -37,7 +31,13 @@ public class CollDetails {
         return toatl_donation;
     }
 
-    public String getTag() {
-        return tag;
+    public CollDetails(String name, String address, String tag, String contact, String email, String gmap, String toatl_donation) {
+        this.name = name;
+        this.address = address;
+        this.tag = tag;
+        this.contact = contact;
+        this.email = email;
+        this.gmap = gmap;
+        this.toatl_donation = toatl_donation;
     }
 }

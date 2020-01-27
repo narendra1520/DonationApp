@@ -48,7 +48,8 @@ public class CollDetailActivity extends AppCompatActivity implements View.OnClic
         map_btn.setOnClickListener(this);
         cal_btn.setOnClickListener(this);
 
-        String tag = getIntent().getStringExtra("tag");
+        //String tag = getIntent().getStringExtra("tag");
+        String tag = "678";
 
         Call<CollDetailsRes> responseCall1 = RetrofitClient.getInstance()
                 .getInterPreter().getCollDetails(tag);
@@ -74,6 +75,9 @@ public class CollDetailActivity extends AppCompatActivity implements View.OnClic
     public void onClick(View v) {
         if(v.getId()==R.id.map_btn) {
             String uri = collDetails.getGmap();
+            if(uri.equals("none")){
+                Toast.makeText(this,"NO Map data found", Toast.LENGTH_SHORT).show();
+            }
             Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse(uri));
             startActivity(intent);
         }

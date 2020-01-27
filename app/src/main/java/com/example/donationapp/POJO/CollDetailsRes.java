@@ -1,7 +1,5 @@
 package com.example.donationapp.POJO;
 
-import java.util.List;
-
 public class CollDetailsRes {
         private boolean error;
         private String message;
